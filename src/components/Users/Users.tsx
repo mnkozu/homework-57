@@ -3,11 +3,11 @@ import UserItem from "./UserItem";
 
 const Users = () => {
   return (
-    <div>
-      <h4>Users</h4>
+    <>
+      <h4 className="mb-4 ps-3">Users</h4>
       <UserItem/>
       <UserItem/>
-    </div>
+    </>
   );
 };
 
