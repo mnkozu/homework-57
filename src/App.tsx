@@ -5,7 +5,9 @@ import Users from "./components/Users/Users";
 import {User} from "./types";
 
 function App() {
-  const [users, setUsers] = useState<User[]>([]);
+  const [users, setUsers] = useState<User[]>([
+    {id: '1', name: 'Nurkyz', email: 'nurkyzmamatnazar@gmail.com', isActive: true, role: 'Admin'},
+  ]);
 
   const addUser = (newUser: User) => {
     setUsers(prev => [...prev, newUser]);
@@ -22,7 +24,7 @@ function App() {
             <UserForm onSubmit={addUser}/>
           </div>
           <div className="col">
-            <Users/>
+            <Users users={users}/>
           </div>
         </div>
       </main>

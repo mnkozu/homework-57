@@ -19,7 +19,6 @@ const UserForm: React.FC<Props> = ({onSubmit}) => {
       id: Math.random().toString(),
       ...user,
     });
-    console.log(user);
   };
 
   const onUserChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -57,7 +56,7 @@ const UserForm: React.FC<Props> = ({onSubmit}) => {
       <div className="form-group py-2 pe-2">
         <label className="py-2 pe-2">is active</label>
         <input
-          id="isActive" name="isActive" type="checkbox" required
+          id="isActive" name="isActive" type="checkbox"
           checked={user.isActive}
           onChange={onCheckboxChange}
         />
